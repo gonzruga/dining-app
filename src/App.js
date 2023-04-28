@@ -1,25 +1,76 @@
-import logo from './logo.svg';
+import React from "react";
+import {Outlet } from 'react-router-dom';
+
 import './App.css';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+// import Home from "./pages/Home";
+// import EventsListPage from './pages/EventsListPage';
+// import Users from './pages/Users';
+// import Login from './pages/login/Login';
+// import Signup from './pages/signup/Signup';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <div>
+    <Header />
+    <Outlet />
+    <Footer />
+  </div>)
+  
 }
 
 export default App;
+
+// import { AuthContext } from "./context/AuthContext";
+
+// const RequireAuth = ({children}) => {
+//   return currentUser ? (children) : <Navigate to="" />
+// };
+
+/*
+
+function App() {
+  return (
+  <div>
+    <Header />
+    <Outlet />
+    <Footer />
+  </div>)
+  
+}
+## Lama Dev- AUTH CRUD
+const currentUser = false;
+
+const RequireAuth = ({children}) => {
+  return currentUser ? (children) : <Navigate to="/login" />
+};
+
+  return (
+  <div>
+    <BrowserRouter>
+     <Routes>
+      <Route path="/">       
+        <Route path="login" element={<Login />} />
+        <Route index element={<RequireAuth><Home /></RequireAuth>} />
+        <Route path="events" element={<EventsListPage />} />
+        <Route path="users" element={<Users />} />
+        <Route path="signup" element={<Signup />} />
+      </Route>
+     </Routes>   
+    </BrowserRouter>
+  </div>)
+
+#######
+
+ <div className="App">
+      <p>Signup to create an account</p>
+      <Signup />
+      
+      <p>Already have an account? Login below</p> 
+
+      <Login />
+    </div>
+*/

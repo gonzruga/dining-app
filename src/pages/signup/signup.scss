@@ -1,0 +1,31 @@
+.signup{
+
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+ 
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input{
+            margin: 10px
+        }
+
+        button{
+            background-color: rgba(232, 73, 216, 0.871);
+            cursor: pointer;
+        }
+    
+        span{
+            color: red;
+            margin-top: 10px;
+        }
+    }
+
+   
+}
+
+

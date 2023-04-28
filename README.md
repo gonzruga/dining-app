@@ -1,3 +1,28 @@
+# REFERENCES
+
+React Setup: https://react.dev/learn/start-a-new-react-project
+
+SCSS | SASS: https://sass-lang.com/install
+
+React & SASS SCSS: https://www.w3schools.com/react/react_sass_styling.asp
+
+Firebase Authentication:  
+https://firebase.google.com/docs/auth
+https://firebase.google.com/docs/auth/web/password-auth
+
+Layout | Routing: https://www.youtube.com/watch?v=B36qeYmmDoA
+
+React Bootrap:  https://react-bootstrap.github.io/getting-started/introduction/
+
+React Router v6 - npm i react-router-dom: https://www.youtube.com/watch?v=Ul3y1LXxzdU
+
+React Firebase CRUD: https://www.youtube.com/watch?v=jCY6DH8F4oc
+
+Initialize Cloud Firestore: https://firebase.google.com/docs/firestore/quickstart
+
+Add Data: https://firebase.google.com/docs/firestore/manage-data/add-data
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

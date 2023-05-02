@@ -3,11 +3,20 @@ import { Card } from "react-bootstrap";
 import { CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import "../../styles/event_card.css";
+import "../../styles/event_list_all_details.css";
 
-function ComponentEventCard({ eventCardParameter }) {
-  const { imgUrl, restaurantName, cuisine, date, menuLink, attendence } =
-    eventCardParameter;
+function ComponentEventAllDetails({ eventAllParameters }) {
+  const {
+    eventId,
+    imgUrl,
+    restaurantName,
+    cuisine,
+    description,
+    date,
+    address,
+    menuLink,
+    attendence,
+  } = eventAllParameters;
 
   return (
     <div className="event_card">
@@ -18,32 +27,45 @@ function ComponentEventCard({ eventCardParameter }) {
       </Card>
 
       <CardBody>
-        <div className="event_title">
-          <Link to={`/events/${restaurantName}`}> {restaurantName} </Link>{" "}
-        </div>
+        <div className="event_title">{restaurantName}</div>
 
         <div className="card_bottom">
           {/* className="card_bottom d-flex align-items-center justify-content-between mt-3" */}
-
-          <h6>
+          <h5>{description}</h5>
+          <h5>
             <i class="ri-restaurant-2-fill"></i> Cuisine: {cuisine}
-          </h6>
-
-          <h6>
+          </h5>{" "}
+          <h5>
             <i class="ri-calendar-event-fill"></i> {date}
-          </h6>
-
-          <h6>
+          </h5>
+          <h5>
             <i class="ri-group-fill"></i> Maximum Attendees: {attendence}
-          </h6>
-
+          </h5>
+          <h5>
+            <i class="ri-map-pin-line"></i> {address}
+          </h5>
           <h6>
-            <i class="ri-global-line"></i>
+            <i class="ri-global-line"></i>{" "}
             <a href={menuLink} target="_blank">
-              {" "}
               Menu/Website
             </a>
           </h6>
+        </div>
+
+        <div>
+          <button className="btn join_btn btn-primary">Join Event</button>
+        </div>
+
+        <div>
+          <button className="btn join_btn">
+            <Link to={`/events/${eventId}`}>TEST: Single Event Details</Link>
+          </button>
+
+          <button className="btn join_btn">
+            <Link to={`/eventComponent/${eventId}`}>
+              TEST: Component Single Event
+            </Link>
+          </button>
         </div>
       </CardBody>
       <hr></hr>
@@ -51,7 +73,7 @@ function ComponentEventCard({ eventCardParameter }) {
   );
 }
 
-export default ComponentEventCard;
+export default ComponentEventAllDetails;
 
 /*  
 <img src={imgUrl} alt="" />

@@ -1,65 +1,66 @@
-import React from 'react'
-
-import {
-  createBrowserRouter,
-} from "react-router-dom";
-
-// import Root, { rootLoader } from "./routes/root";
-// import Team, { teamLoader } from "./routes/team";
-// import { AuthContext } from './context/AuthContext';
-
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
 import Home from "../pages/Home";
-import EventsListPage from '../pages/EventsListPage';
-import Users from '../pages/Users';
-import Login from '../pages/login/Login';
-import Signup from '../pages/signup/Signup';
+import EventsListPage from "../pages/EventsListPage";
+import Users from "../pages/Users";
+import Login from "../pages/login/Login";
+import Signup from "../pages/signup/Signup";
+import EventCard from "../pages/EventCard";
+
+//BELOW IMPORTS NOT WORKING
+import SingleEventDetails from "../pages/_EventSinglePage";
+import ComponentSingleEvent from "../components/Event_Card/_ComponentSingleEvent";
+
+// import { AuthContext } from './context/AuthContext';
 
 // import RequireAuth from '../App';
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <App />,
-      // loader: rootLoader,
-      children: [
-        {
-          path: "/login",
-          element: <Login />,
-        },
-        {
-          path: "/test",
-          element: <div>TESTING MF!!</div>,
-          // loader: teamLoader,
-        },
-        {
-          path: "/home",
-          element: <Home />,
-          // element: <RequireAuth><Home /></RequireAuth>,
+  {
+    path: "/",
+    element: <App />,
+    // loader: rootLoader,
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
+        // element: <RequireAuth><Home /></RequireAuth>,
+      },
+      {
+        path: "/events",
+        element: <EventsListPage />,
+      },
+      {
+        path: "/event",
+        element: <EventCard />,
+      },
+      {
+        path: "/events/:parameter",
+        element: <SingleEventDetails />,
+      },
+      {
+        path: "/eventComponent/:parameter",
+        element: <ComponentSingleEvent />,
+      },
+      {
+        path: "/users",
+        element: <Users />,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
+      },
+    ],
+  },
+]);
 
-        },
-        {
-          path: "/events",
-          element: <EventsListPage />,
-        },
-        {
-          path: "/users",
-          element: <Users />,
-        },
-        {
-          path: "/signup",
-          element: <Signup />,
-        },
-        
-       
-      ],
-    },
-  ]);
-
- 
-  
-  export default router;
+export default router;
 
 /*
 

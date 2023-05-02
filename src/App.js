@@ -1,25 +1,20 @@
 import React from "react";
-import {Outlet } from 'react-router-dom';
+import "remixicon/fonts/remixicon.css";
 
-import './App.css';
+import { Outlet } from "react-router-dom";
+
+import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-// import Home from "./pages/Home";
-// import EventsListPage from './pages/EventsListPage';
-// import Users from './pages/Users';
-// import Login from './pages/login/Login';
-// import Signup from './pages/signup/Signup';
-
-
 function App() {
   return (
-  <div>
-    <Header />
-    <Outlet />
-    <Footer />
-  </div>)
-  
+    <div>
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

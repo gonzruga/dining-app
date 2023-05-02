@@ -1,18 +1,17 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-import ContainerEventList from "../containers/Events/ContainerEventList";
+// import ContainerEventList from "../containers/Events/ContainerEventList";
+import ContainerEventCard from "../containers/Events/ContainerEventCard";
 
-const EventsListPage = () => {
-  const eventsPageData = [
+const EventCard = () => {
+  const eventsCardData = [
     {
       eventId: "01",
       imgUrl: "img_Rannabar",
       restaurantName: "Burger Kitchen Rannabaar",
       cuisine: "Burgers",
-      description: "There is nothing like burgers at the beach in the sun",
       date: "Sunday May 28 @ 12pm",
-      address: "Kesk tee 20, Haabneeme",
       menuLink: "https://burgerkitchen.ee/en/front-page/",
       attendence: 10,
     },
@@ -21,9 +20,7 @@ const EventsListPage = () => {
       imgUrl: "img_Katharinenthal",
       restaurantName: "Katharinenthal",
       cuisine: "Cafe",
-      description: "Welcome to enjoy brunch at the park.",
       date: "Sunday June 11 @ 12pm",
-      address: "A. Weizenbergi 37",
       menuLink: "https://katharinenthal.ee/en/menu/",
       attendence: 12,
     },
@@ -32,14 +29,14 @@ const EventsListPage = () => {
   return (
     <Container>
       <h2>Welcome to Dine and Network at any Upcoming Event</h2>
-      <ContainerEventList
-        eventContainerParameter={eventsPageData}
-      ></ContainerEventList>
+      <ContainerEventCard
+        eventContainerCardParameter={eventsCardData}
+      ></ContainerEventCard>
     </Container>
   );
 };
 
-export default EventsListPage;
+export default EventCard;
 
 /*
 #### DATA IN EVENT PAGE

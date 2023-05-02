@@ -12,9 +12,9 @@ https://firebase.google.com/docs/auth/web/password-auth
 
 Layout | Routing: https://www.youtube.com/watch?v=B36qeYmmDoA
 
-React Bootrap:  https://react-bootstrap.github.io/getting-started/introduction/
+React Bootrap: https://react-bootstrap.github.io/getting-started/introduction/
 
-React Router v6 - npm i react-router-dom: https://www.youtube.com/watch?v=Ul3y1LXxzdU
+React Router v6 (Old) - npm i react-router-dom: https://www.youtube.com/watch?v=Ul3y1LXxzdU
 
 React Firebase CRUD: https://www.youtube.com/watch?v=jCY6DH8F4oc
 
@@ -22,6 +22,7 @@ Initialize Cloud Firestore: https://firebase.google.com/docs/firestore/quickstar
 
 Add Data: https://firebase.google.com/docs/firestore/manage-data/add-data
 
+Pass Data - useParams 'Stringify': https://www.youtube.com/watch?v=y_pr4lRoUto
 
 # Getting Started with Create React App
 

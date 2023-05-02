@@ -4,19 +4,19 @@ import React from "react";
 // import { Col } from "react-bootstrap";
 //import {Card, Button, Col, Row} from "react-bootstrap";
 
-import ComponentEventAllDetails from "../../components/Event_Card/ComponentEventAllDetails";
+import ComponentEventCard from "../../components/Event_Card/ComponentEventCard";
 
-function ContainerEventList({ eventContainerParameter }) {
-  return eventContainerParameter.map((madeUpParameterForEventList) => {
+function ContainerEventCard({ eventContainerCardParameter }) {
+  return eventContainerCardParameter.map((madeUpParameterForEventCard) => {
     return (
-      <ComponentEventAllDetails
-        eventAllParameters={madeUpParameterForEventList}
-      ></ComponentEventAllDetails>
+      <ComponentEventCard
+        eventCardParameter={madeUpParameterForEventCard}
+      ></ComponentEventCard>
     );
   });
 }
 
-export default ContainerEventList;
+export default ContainerEventCard;
 
 /*
 // #### DATA IN EVENT PAGE - CLASS version - Not using data in Container]

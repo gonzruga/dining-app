@@ -6,8 +6,15 @@ import { Link } from "react-router-dom";
 import "../../styles/event_card.css";
 
 function ComponentEventCard({ eventCardParameter }) {
-  const { imgUrl, restaurantName, cuisine, date, menuLink, attendence } =
-    eventCardParameter;
+  const {
+    eventId,
+    imgUrl,
+    restaurantName,
+    cuisine,
+    date,
+    menuLink,
+    attendence,
+  } = eventCardParameter;
 
   return (
     <div className="event_card">
@@ -19,7 +26,8 @@ function ComponentEventCard({ eventCardParameter }) {
 
       <CardBody>
         <div className="event_title">
-          <Link to={`/events/${restaurantName}`}> {restaurantName} </Link>{" "}
+          <Link to={`/eventComponent/${eventId}`}> {restaurantName} </Link>{" "}
+          {/* Link goes to page showing list of all events. */}
         </div>
 
         <div className="card_bottom">
@@ -44,6 +52,10 @@ function ComponentEventCard({ eventCardParameter }) {
               Menu/Website
             </a>
           </h6>
+
+          <button className="btn join_btn">
+            <Link to={`/eventComponent/${eventId}`}>Event Page</Link>
+          </button>
         </div>
       </CardBody>
       <hr></hr>

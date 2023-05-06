@@ -8,13 +8,9 @@ import Users from "../pages/Users";
 import Login from "../pages/login/Login";
 import Signup from "../pages/signup/Signup";
 import EventCard from "../pages/EventCard";
-
-//BELOW IMPORTS NOT WORKING
-import SingleEventDetails from "../pages/_EventSinglePage";
-import ComponentSingleEvent from "../components/Event_Card/_ComponentSingleEvent";
+import ComponentSingleEvent from "../components/Events/ComponentSingleEvent";
 
 // import { AuthContext } from './context/AuthContext';
-
 // import RequireAuth from '../App';
 
 const router = createBrowserRouter([
@@ -41,11 +37,7 @@ const router = createBrowserRouter([
         element: <EventCard />,
       },
       {
-        path: "/events/:parameter",
-        element: <SingleEventDetails />,
-      },
-      {
-        path: "/eventComponent/:parameter",
+        path: "/eventComponent/:eventId",
         element: <ComponentSingleEvent />,
       },
       {

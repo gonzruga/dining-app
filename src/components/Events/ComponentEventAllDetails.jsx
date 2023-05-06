@@ -27,7 +27,7 @@ function ComponentEventAllDetails({ eventAllParameters }) {
       </Card>
 
       <CardBody>
-        <div className="event_title">{restaurantName}</div>
+        <div className="event_title"> {restaurantName}</div>
 
         <div className="card_bottom">
           {/* className="card_bottom d-flex align-items-center justify-content-between mt-3" */}
@@ -58,13 +58,7 @@ function ComponentEventAllDetails({ eventAllParameters }) {
 
         <div>
           <button className="btn join_btn">
-            <Link to={`/events/${eventId}`}>TEST: Single Event Details</Link>
-          </button>
-
-          <button className="btn join_btn">
-            <Link to={`/eventComponent/${eventId}`}>
-              TEST: Component Single Event
-            </Link>
+            <Link to={`/eventComponent/${eventId}`}>Event Page</Link>
           </button>
         </div>
       </CardBody>

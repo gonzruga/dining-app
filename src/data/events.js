@@ -1,6 +1,6 @@
-const events = [
+export const events = [
   {
-    id: "01",
+    eventId: "01",
     imgUrl: "img_Rannabar",
     restaurantName: "Burger Kitchen Rannabaar",
     cuisine: "Burgers",
@@ -11,7 +11,7 @@ const events = [
     attendence: 10,
   },
   {
-    id: "02",
+    eventId: "02",
     imgUrl: "img_Katharinenthal",
     restaurantName: "Katharinenthal",
     cuisine: "Cafe",
@@ -22,5 +22,3 @@ const events = [
     attendence: 12,
   },
 ];
-
-export default events;

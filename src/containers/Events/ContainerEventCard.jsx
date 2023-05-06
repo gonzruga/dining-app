@@ -4,7 +4,7 @@ import React from "react";
 // import { Col } from "react-bootstrap";
 //import {Card, Button, Col, Row} from "react-bootstrap";
 
-import ComponentEventCard from "../../components/Event_Card/ComponentEventCard";
+import ComponentEventCard from "../../components/Events/ComponentEventCard";
 
 function ContainerEventCard({ eventContainerCardParameter }) {
   return eventContainerCardParameter.map((madeUpParameterForEventCard) => {

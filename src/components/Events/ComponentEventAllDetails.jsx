@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import { CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import "../../styles/event_list_all_details.css";
+import "../../styles/componentEventAllDetails.css";
 
 function ComponentEventAllDetails({ eventAllParameters }) {
   const {

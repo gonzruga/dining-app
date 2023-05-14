@@ -13,7 +13,9 @@ const nav_links = [
   { path: "/home", display: "Home" }, // if path contains # it goes to 'Home'
   // { path:'/about', display:'About' },
   { path: "/events", display: "Events" },
+  { path: "/add", display: "Add Event" },
   { path: "/users", display: "Users" },
+  { path: "/usersSB", display: "UsersSpringBoot" },
   { path: "/login", display: "Login" },
   { path: "/signup", display: "Signup" },
 ];

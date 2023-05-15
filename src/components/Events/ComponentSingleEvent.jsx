@@ -46,10 +46,7 @@ const ComponentSingleEvent = () => {
         <i class="ri-map-pin-line"></i> {event.address}
       </h5>
       <h6>
-        <i class="ri-global-line"></i>{" "}
-        <a href={event.menuLink} target="_blank">
-          Menu/Website
-        </a>
+        <i class="ri-global-line"></i> <a href={event.menuLink}>Menu/Website</a>
       </h6>
       <div>
         <button className="btn join_btn btn-primary">Join Event</button>

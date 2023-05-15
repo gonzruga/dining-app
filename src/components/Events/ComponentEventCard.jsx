@@ -47,10 +47,7 @@ function ComponentEventCard({ eventCardParameter }) {
 
           <h6>
             <i class="ri-global-line"></i>
-            <a href={menuLink} target="_blank">
-              {" "}
-              Menu/Website
-            </a>
+            <a href={menuLink}> Menu/Website</a>
           </h6>
 
           <button className="btn join_btn">

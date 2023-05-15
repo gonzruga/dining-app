@@ -12,6 +12,10 @@ import EventCard from "../pages/EventCard";
 import ComponentSingleEvent from "../components/Events/ComponentSingleEvent";
 import EventCreate from "../pages/EventCreate";
 
+import EventsList from "../components/EventsSB/event-list.component";
+import AddEvent from "../components/EventsSB/add-event.component";
+import Event from "../components/EventsSB/event.component";
+
 // import { AuthContext } from './context/AuthContext';
 // import RequireAuth from '../App';
 
@@ -22,20 +26,28 @@ const router = createBrowserRouter([
     // loader: rootLoader,
     children: [
       {
-        path: "/login",
-        element: <Login />,
+        path: "/events/:id",
+        element: <Event />,
       },
       {
-        path: "/#home",
+        path: "/events",
+        element: <EventsList />,
+      },
+      {
+        path: "/add",
+        element: <AddEvent />,
+      },
+      {
+        path: "/home",
         element: <Home />,
         // element: <RequireAuth><Home /></RequireAuth>,
       },
       {
-        path: "/events",
+        path: "/events1",
         element: <EventsListPage />,
       },
       {
-        path: "/add",
+        path: "/create",
         element: <EventCreate />,
       },
       {
@@ -51,8 +63,8 @@ const router = createBrowserRouter([
         element: <Users />,
       },
       {
-        path: "/usersSB",
-        element: <UsersSB />,
+        path: "/login",
+        element: <Login />,
       },
       {
         path: "/signup",

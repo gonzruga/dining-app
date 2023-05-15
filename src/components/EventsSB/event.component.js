@@ -199,128 +199,156 @@ export default class Event extends Component {
   }
 
   render() {
+    const { currentEvent } = this.state;
+
     return (
       <div>
-        <div className="submit-form">
-          {this.state.submitted ? (
-            <div>
-              <h4>You submitted successfully!</h4>
-              <button className="btn btn-success" onClick={this.newEvent}>
-                Create
-              </button>
-            </div>
-          ) : (
-            <div>
-              <div>
+        {currentEvent ? (
+          <div className="edit-form">
+            <h4>Event</h4>
+            <form>
+              <div className="form-group">
+                <label htmlFor="eventId">Event Id</label>
                 <input
                   id="eventId"
-                  name="eventid"
                   placeholder="Event ID"
-                  value={this.state.eventId}
+                  value={currentEvent.eventId}
                   onChange={this.onChangeEventId}
                   type="text"
                   className="form-control"
-                  required
                 />
               </div>
 
-              <div>
+              <div className="form-group">
+                <label htmlFor="restaurantName">Restaurant Name</label>
                 <input
                   id="restaurantName"
-                  name="restaurantName"
                   placeholder="Restaurant Name"
-                  value={this.state.restaurantName}
+                  value={currentEvent.restaurantName}
                   onChange={this.onChangeRestaurantName}
                   type="text"
                   className="form-control"
-                  required
                 />
               </div>
 
-              <div>
+              <div className="form-group">
+                <label htmlFor="cuisine">Cuisine</label>
                 <input
                   id="cuisine"
-                  name="cuisine"
-                  placeholder="Cuisine Type"
-                  value={this.state.cuisine}
+                  placeholder="cuisine"
+                  value={currentEvent.cuisine}
                   onChange={this.onChangeCuisine}
                   type="text"
                   className="form-control"
-                  required
                 />
               </div>
 
-              <div>
+              <div className="form-group">
+                <label htmlFor="description">Description</label>
                 <input
                   id="description"
-                  name="description"
-                  placeholder="Event Description"
-                  value={this.state.description}
+                  placeholder="description"
+                  value={currentEvent.description}
                   onChange={this.onChangeDescription}
                   type="text"
                   className="form-control"
-                  required
                 />
               </div>
 
-              <div>
+              <div className="form-group">
+                <label htmlFor="date">Date: </label>
                 <input
                   id="date"
-                  name="date"
                   placeholder="Date"
-                  value={this.state.date}
+                  value={currentEvent.date}
                   onChange={this.onChangeDate}
                   type="text"
                   className="form-control"
-                  required
                 />
               </div>
 
-              <div>
+              <div className="form-group">
+                <label htmlFor="address">Address</label>
                 <input
                   id="address"
-                  name="address"
                   placeholder="Address"
-                  value={this.state.address}
+                  value={currentEvent.address}
                   onChange={this.onChangeAddress}
                   type="text"
                   className="form-control"
-                  required
                 />
               </div>
 
-              <div>
+              <div className="form-group">
+                <label htmlFor="menuLink">Menu / Website</label>
                 <input
                   id="menuLink"
-                  name="menuLink"
-                  placeholder="Link to Menu / Website"
-                  value={this.state.menuLink}
+                  placeholder="Link to Menu"
+                  value={currentEvent.menuLink}
                   onChange={this.onChangeMenuLink}
                   type="text"
                   className="form-control"
-                  required
                 />
               </div>
 
-              <div>
+              <div className="form-group">
+                <label htmlFor="attendance">Attendance: </label>
                 <input
                   id="attendance"
-                  name="attendance"
-                  placeholder="Attendance"
-                  value={this.state.attendance}
-                  onChange={this.onChangeattendance}
-                  type="number"
+                  placeholder="attendance"
+                  value={currentEvent.attendance}
+                  onChange={this.onChangeAttendance}
+                  type="text"
                   className="form-control"
-                  required
                 />
               </div>
 
-              <button className="btn btn-success" onClick={this.saveEvent}>
-                Submit
+              <div className="form-group">
+                <label>
+                  <strong>Status: </strong>
+                </label>
+                {currentEvent.published ? "Published" : "Pending"}
+              </div>
+            </form>
+
+            {currentEvent.published ? (
+              <button
+                className="badge badge-primary mr-2"
+                onClick={() => this.updatePublished(false)}
+              >
+                Unpublish
               </button>
-            </div>
-          )}
-        </div>
+            ) : (
+              <button
+                className="badge badge-primary mr-2"
+                onClick={() => this.updatePublished(true)}
+              >
+                Publish
+              </button>
+            )}
+
+            <button
+              className="badge badge-danger mr-2"
+              onClick={() => this.deleteEvent}
+            >
+              DELETE
+            </button>
+
+            <button
+              type="submit"
+              className="badge badge-success"
+              onClick={() => this.updateEvent}
+            >
+              Update
+            </button>
+            <p> {this.state.message}</p>
+          </div>
+        ) : (
+          <div>
+            <br />
+            <p> Click on any event</p>
+          </div>
+        )}
       </div>
     );
   }

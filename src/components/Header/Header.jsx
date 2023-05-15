@@ -12,10 +12,12 @@ import logo from "../../assets/images/logo.jpg";
 const nav_links = [
   { path: "/home", display: "Home" }, // if path contains # it goes to 'Home'
   // { path:'/about', display:'About' },
+
   { path: "/events", display: "Events" },
   { path: "/add", display: "Add Event" },
+  { path: "/events1", display: "Events.1" },
+  { path: "/create", display: "Create Event.1" },
   { path: "/users", display: "Users" },
-  { path: "/usersSB", display: "UsersSpringBoot" },
   { path: "/login", display: "Login" },
   { path: "/signup", display: "Signup" },
 ];

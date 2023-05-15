@@ -230,7 +230,7 @@ export default class AddEvent extends Component {
                 name="attendance"
                 placeholder="Attendance"
                 value={this.state.attendance}
-                onChange={this.onChangeattendance}
+                onChange={this.onChangeAttendance}
                 type="number"
                 className="form-control"
                 required

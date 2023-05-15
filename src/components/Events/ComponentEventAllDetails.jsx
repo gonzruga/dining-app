@@ -45,10 +45,7 @@ function ComponentEventAllDetails({ eventAllParameters }) {
             <i class="ri-map-pin-line"></i> {address}
           </h5>
           <h6>
-            <i class="ri-global-line"></i>{" "}
-            <a href={menuLink} target="_blank">
-              Menu/Website
-            </a>
+            <i class="ri-global-line"></i> <a href={menuLink}>Menu/Website</a>
           </h6>
         </div>
 

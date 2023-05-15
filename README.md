@@ -1,3 +1,14 @@
+# Basic Instructions
+
+To start the application rund `npm start`
+
+• Files in folder 'EventsSB' have been made to align with the Spring Boot backend.
+The front-end respective pages are 'Events' & 'Add Event'.
+Unfortunately the push and get api are not working.
+
+• Files in folder 'Events' & 'Component' utilize the hard coded data in folder 'Data'in file 'events.js'.
+The front-end respective front end pages are 'Events.1' & 'Create Event.1'
+
 # REFERENCES
 
 React Setup: https://react.dev/learn/start-a-new-react-project

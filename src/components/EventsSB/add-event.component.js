@@ -133,29 +133,31 @@ export default class AddEvent extends Component {
           </div>
         ) : (
           <div>
-            <div>
+            <div className="form-group">
+              <label htmlFor="eventId">Event Id</label>
               <input
-                id="eventId"
-                name="eventid"
-                placeholder="Event ID"
-                value={this.state.eventId}
-                onChange={this.onChangeEventId}
                 type="text"
                 className="form-control"
+                id="eventId"
                 required
+                // placeholder="Event ID"
+                value={this.state.eventId}
+                onChange={this.onChangeEventId}
+                name="eventid"
               />
             </div>
 
-            <div>
+            <div className="form-group">
+              <label htmlFor="restaurantName">restaurant Name</label>
               <input
-                id="restaurantName"
-                name="restaurantName"
-                placeholder="Restaurant Name"
-                value={this.state.restaurantName}
-                onChange={this.onChangeRestaurantName}
                 type="text"
                 className="form-control"
+                id="restaurantName"
                 required
+                // placeholder="Restaurant Name"
+                value={this.state.restaurantName}
+                onChange={this.onChangeRestaurantName}
+                name="restaurantName"
               />
             </div>
 

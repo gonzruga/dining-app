@@ -35,6 +35,16 @@ Add Data: https://firebase.google.com/docs/firestore/manage-data/add-data
 
 Pass Data - useParams 'Stringify': https://www.youtube.com/watch?v=y_pr4lRoUto
 
+# BACKEND - SPRING BOOT
+
+Postgresql password authentication failure: https://www.youtube.com/watch?v=q5rjPRiXSrc
+
+PSQL Commands: https://www.youtube.com/watch?v=AzGQ87wUsms
+
+Amogos Full Spring Boot tutorial: https://www.youtube.com/watch?v=9SGDpanrc8U&t=3020s
+
+Crud BezKoder: https://www.youtube.com/watch?v=0-RO4yx6rwU
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
